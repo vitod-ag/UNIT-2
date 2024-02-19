@@ -23,6 +23,7 @@ header {
     margin-bottom: 1.5em;
     padding: 2em 1.5em;
     font-size: 1.6rem;
+    height: 100px;
 }
 
 
@@ -277,30 +278,94 @@ footer a {
 /* riguarda dal desktop */
 
 @media screen and (min-width:1200px) {
-        body {
-         padding: 0 75px;   
-        }
 
-        header {
-            height: 0;
-            position: relative;
-            text-align: center;
-        }
+    header, main, footer {
+        margin: 10px 75px;
+    }
 
-        .container_logo{
-            text-align: start;
-            display: inline-block;
-            position: absolute;
-            left: 5%;
-        }
+    header {
+        position: relative;
+    }
+
+    .container_logo {
+        position: absolute;
+        left: 5%;
+        top: 50%;
+        transform: translateY(-50%)
+    }
+
+    
+    .lista {
+        position: absolute;
+        right: 10%;
+        top: 50%;
+        transform: translateY(-50%)
+    }
+
+    .inline {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+    }
+
+    article {
+        font-size: 1.5rem;
+    }
+
+    table th, td {
+        padding-left: 55px;
+        padding-right: 80px;
+        text-align: center;
+    }
 
 
-        .lista {
-            margin-top: 2px;
-            display: inline-block;
-            position: absolute;
-            right: 5%;
-        }
-       
+    .container_master {
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .container_video {
+        display: inline-block;
+        width: 47%;
+        vertical-align: middle;
+    }
+
+    .container_video iframe {
+        height: 203px;
+    }
+
+    section {
+        display: inline-block;
+        width: 47%;
+        vertical-align: middle;
+        border-radius: 15px;
+    }
+
+    aside div {
+        display: inline-block;
+        padding: 40px;
+        text-align: center;
+    }
+
+    footer {
+        font-size: 2.5rem;
+    }
 }
 
+
+@media print {
+    header, footer, aside, .container_video, form {
+        display: none;
+    }
+
+    article h1 {
+        font-size: 30px;
+    }
+
+
+
+
+    
+
+
+}
