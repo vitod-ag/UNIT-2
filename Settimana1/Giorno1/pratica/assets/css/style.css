@@ -272,21 +272,34 @@ footer a {
     }
 }
 
+
+
+/* riguarda dal desktop */
+
 @media screen and (min-width:1200px) {
         body {
          padding: 0 75px;   
         }
 
         header {
-            height: 120px;
+            height: 0;
+            position: relative;
+            text-align: center;
         }
 
-        .container_logo {
+        .container_logo{
             text-align: start;
+            display: inline-block;
+            position: absolute;
+            left: 5%;
         }
 
-        .container_logo p {
+
+        .lista {
             margin-top: 2px;
+            display: inline-block;
+            position: absolute;
+            right: 5%;
         }
        
 }
