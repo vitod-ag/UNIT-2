@@ -223,6 +223,10 @@ footer a {
         width: 100%;
     }
 
+    header {
+        height: 230px;
+    }
+
     .container_pic {
         width: 70px;
         height: 70px;
@@ -236,6 +240,8 @@ footer a {
     p {
         font-size: 1.1em;
     }
+
+
 
     .formattazione_codice {
         font-weight: bold;
@@ -258,6 +264,10 @@ footer a {
     .paragrafo_sotto_tabella {
         margin-top: 5em;
         font-size: 0.95em;
+    }
+
+    fieldset {
+        border: none;
     }
 
     footer {
@@ -287,6 +297,7 @@ footer a {
 
     header {
         position: relative;
+        height: 100px;
     }
 
     .container_logo {
@@ -318,8 +329,8 @@ footer a {
         padding-left: 55px;
         padding-right: 80px;
         text-align: center;
+        
     }
-
 
     .container_master {
         margin: 0 auto;
@@ -330,10 +341,11 @@ footer a {
         display: inline-block;
         width: 47%;
         vertical-align: middle;
+        margin-left: 0;
     }
 
     .container_video iframe {
-        height: 203px;
+        height: 240px;
     }
 
     section {
@@ -341,6 +353,7 @@ footer a {
         width: 47%;
         vertical-align: middle;
         border-radius: 15px;
+        padding: 10px 0;
     }
 
     aside div {
