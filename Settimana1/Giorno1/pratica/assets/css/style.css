@@ -214,6 +214,8 @@ footer a {
     color: fuchsia;
 }
 
+/*--------TABLET---------*/
+
 @media screen and (min-width:768px){
     
     .container_pic img {
@@ -275,7 +277,7 @@ footer a {
 
 
 
-/* riguarda dal desktop */
+/*--------DESKTOP---------*/
 
 @media screen and (min-width:1200px) {
 
@@ -352,6 +354,8 @@ footer a {
     }
 }
 
+/*--------PRINT---------*/
+
 
 @media print {
     header, footer, aside, .container_video, form {
@@ -360,6 +364,11 @@ footer a {
 
     article h1 {
         font-size: 30px;
+    }
+
+    main {
+        box-shadow: none;
+        border: 0;
     }
 
 
