@@ -33,6 +33,7 @@ body {
 
 .giallo h3, .giallo p {
     font-family: "Indie Flower", cursive;
+    font-size: 35px;
 }
 
 .giallo h3 {
@@ -56,7 +57,7 @@ body {
 
 .verde h3, .verde p {
     font-family: "Indie Flower", cursive;
-    
+    font-size: 35px;
 }
 
 .verde h3 {
@@ -80,6 +81,7 @@ body {
 
 .viola h3, .viola p {
     font-family: "Indie Flower", cursive;
+    font-size: 35px;
 }
 
 .viola h3 {
