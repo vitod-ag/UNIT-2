@@ -105,16 +105,18 @@ article .bookmark p {
 
 #articoli {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0px 160px;
+    width: 100%;
 }
 
 .articolo {
-    padding: 0px 160px;
+    width: 33%;
     margin: 5px;
-    width: 34%;
     display: flex;
     font-family: "Spectral", serif;
+    align-items: stretch;
 }
 
 .number {
