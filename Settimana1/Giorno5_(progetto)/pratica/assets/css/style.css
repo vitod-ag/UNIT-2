@@ -1,0 +1,72 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+#container {
+    margin: 20px 0;
+    height: 100vh;
+}
+
+header {
+    background-color: #ffc017;
+    height: 20%;
+}
+
+/* divido la header in due parti: header1 e header2*/
+
+#header1 {
+    padding: 0px 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+#header1 .nav_list ul {
+    padding: 0;
+}
+
+#header1 .nav_list ul li {
+    list-style-type: none;
+    margin: 0 5px;
+    display: inline;
+    font-size: 1em;
+} 
+
+.nav_list button {
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+
+/* lavoro su header2 */
+
+#header2 {
+    padding: 0px 0px 0px 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+}
+
+.curioso {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.curioso h1 {
+    font-family: "Spectral", serif;
+    font-size: 6em;
+    font-weight: 300;
+    letter-spacing: -0.1em;
+}
+
+.m {
+    
+}
