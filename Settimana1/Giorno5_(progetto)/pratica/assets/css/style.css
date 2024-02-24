@@ -214,3 +214,8 @@ article .bookmark p {
     width: 30px;
 }
 
+.tag{
+    background-color: rgb(159, 159, 159);
+    border-radius: 20px;
+}
+
