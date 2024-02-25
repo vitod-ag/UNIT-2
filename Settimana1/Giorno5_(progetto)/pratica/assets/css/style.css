@@ -174,8 +174,13 @@ article .bookmark p {
     flex-direction: column;
 }
 
-#cards, .card, .author, .testo, .datePost, .datePost > span, #sezione {
+#cards, .card, .author, .testo, .datePost, .datePost > span {
     display: flex;
+}
+
+#sezione {
+    display: flex;
+    justify-content: space-around;
 }
 
 .datePost {
@@ -185,7 +190,7 @@ article .bookmark p {
 .card {
     font-family: "Spectral", serif;
     justify-content: space-between;
-   
+    padding-top: 30px;
 }
 
 #cards {
@@ -198,6 +203,10 @@ article .bookmark p {
 
 .datePost, .datePost > span {
     align-items: center;
+}
+
+.foto {
+    padding-top: 25px;
 }
 
 .foto img {
@@ -217,5 +226,40 @@ article .bookmark p {
 .tag{
     background-color: rgb(159, 159, 159);
     border-radius: 20px;
+}
+
+#aside {
+    width: 28%;
+    position: sticky;
+    top: 0;
+}
+
+.aside_padre {
+    margin-bottom: 25px;
+}
+
+#aside h3 {
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-size: small;
+    font-weight: 750;
+}
+
+.aside_span {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.span {
+    border: 1px solid gray;
+    padding: 5px;
+    color: gray;
+    margin: 5px;
+}
+
+.links a {
+    text-decoration: none;
+    color: gray;
+    padding: 7px 10px 10px 0px;
 }
 
