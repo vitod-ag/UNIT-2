@@ -190,7 +190,6 @@ article .bookmark p {
 .card {
     font-family: "Spectral", serif;
     justify-content: space-between;
-    padding-top: 30px;
 }
 
 #cards {
@@ -216,6 +215,7 @@ article .bookmark p {
 #sezione {
     width: 80%;
     margin: 0 auto;
+    padding-top: 30px;
 }
 
 .foto_tonda img {
@@ -230,8 +230,6 @@ article .bookmark p {
 
 #aside {
     width: 28%;
-    position: sticky;
-    top: 0;
 }
 
 .aside_padre {
@@ -240,7 +238,6 @@ article .bookmark p {
 
 #aside h3 {
     text-transform: uppercase;
-    font-family: "Roboto", sans-serif;
     font-size: small;
     font-weight: 750;
 }
@@ -252,9 +249,10 @@ article .bookmark p {
 
 .span {
     border: 1px solid gray;
-    padding: 5px;
+    padding: 7px;
     color: gray;
     margin: 5px;
+    font-size: small;
 }
 
 .links a {
