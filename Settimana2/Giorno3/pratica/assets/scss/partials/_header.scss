@@ -1,0 +1,23 @@
+@import 'colori';
+
+header {
+    height: 400px;
+    padding: 50px;
+    background-color: $bg_hero;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a{
+    font-size: small;
+    text-decoration: none;
+    padding: 10px;
+    color: $text;
+}
+
+.container_pic img {
+    width: 25%;
+}
