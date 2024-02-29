@@ -18,6 +18,43 @@
 	</head>
 
 	<body>
+		<header class="gradiente">
+			<div class="container h-100">
+				<div class="row h-100 align-items-center">
+					<div
+						class="col-10 h-100 d-flex justify-content-center align-items-center">
+						<h1 class="text-center">ITALIA</h1>
+					</div>
+					<div class="col-2 h-100">
+						<img
+							class="logo"
+							src="assets/img/Italia_Bandiera.png" />
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<div
+				class="container-fluid d-flex justify-content-center mt-5 mb-5">
+				<select id="regioni_menu" class="form-select-sm w-25">
+					<option value=""></option>
+				</select>
+				<select id="province_menu" class="form-select-sm w-25">
+					<option value=""></option>
+				</select>
+			</div>
+
+			<div class="container-fluid gradiente">&nbsp;</div>
+
+			<div class="container-fluid mt-3" id="nascosto">
+				<h4 id="nomeRegione"></h4>
+				<img id="stemmaRegione" src="" />
+				<h4 id="nomeProvincia"></h4>
+				<img id="stemmaProvincia" src="" />
+			</div>
+		</main>
+
 		<script src="assets/js/script.js"></script>
 	</body>
 </html>
