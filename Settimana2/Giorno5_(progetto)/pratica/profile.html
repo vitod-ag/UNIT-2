@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Netflix</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg d-flex justify-content-between">
+      <div class="container-fluid">
+        <div class="pic-container">
+          <img src="Netflix-assets/Netflix-assets/assets/netflix_logo.png" alt="logo Netflix" style="max-width: 150px;">
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link text-secondary" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link text-secondary fw-bold" href="#">Tv Shows</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link text-secondary fw-bold" href="#">Movies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link text-secondary fw-bold" href="#">Recently Added</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link text-secondary fw-bold" href="#">My List</a>
+            </li>
+          </ul>
+          <span class="navbar-text text-secondary">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link text-secondary" aria-current="page" href="#"><i class="bi bi-search"></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary" aria-current="page" href="#">KIDS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary" aria-current="page" href="#"><i class="bi bi-bell-fill"></i></a>
+              </li>
+              <div class="dropdown dropdown-toggle">
+                <img src="Netflix-assets/Netflix-assets/assets/avatar.png" width="30px" alt="">
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </div>
+          </span>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-12 col-lg-7 mx-auto">
+          <div class="title fs-1 text-white">Edit Profile</div>
+        </div>
+        <div class="col-6">
+          <div>
+            <img width="120" src="Netflix-assets/Netflix-assets/assets/avatar.png" alt="avatar" />
+          </div>
+        </div>
+        <div class="col-6 d-flex flex-column">
+          <button
+              type="button"
+              class="btn btn-outline-secondary rounded-0">
+              Vito Dagnello
+            </button>
+            <div class="mb-3">
+              <label for="disabledSelect" class="fs-4">Language</label>
+              <select
+                id="disabledSelect"
+                class="form-select rounded-0 w-50 bg-black"
+              >
+                <option>Italian</option>
+                <option>English</option>
+                <option>Spanish</option>
+              </select>
+            </div>
+            <div class="d-flex flex-column border-top border-bottom py-4">
+              <label for="disabledSelect" class="form-label fs-4"
+                >Maturity Settings:</label
+              >
+              <button type="button" class="btn mb-2 w-75 bg-secondary btn-secondary rounded-0 btn-sm fw-bold">
+                ALL MATURITY RATINGS
+              </button>
+              <p>Show titles of all maturity ratings for this profile</p>
+              <button
+                type="button"
+                class="btn py-1 w-25 bg-secondary btn-secondary rounded-0 btn-sm text-secondary bg-transparent"
+              >
+                EDIT
+              </button>
+            </div>
+            <div class="d-flex flex-column">
+              <label for="disabledSelect" class="mt-3 fs-4 form-label"
+                >Autoplay controls</label
+              >
+              <div class="d-flex flex-row">
+                <input
+                  class="form-check-input fs-3 rounded-0 bg-black border-secondary shadow-none me-3"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label class="form-check-label mt-2" for="flexCheckDefault">
+                  Autoplay next episode in a series on all devices.
+                </label>
+              </div>
+              <div class="d-flex">
+                <input
+                  class="form-check-input rounded-0 fs-3 bg-black border-secondary shadow-none me-3"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label class="mt-2 form-check-label" for="flexCheckDefault">
+                  Autoplay previews while browsing on all devices.
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 mx-auto">
+          <button
+            type="button"
+            class="btn w-25 py-2 mx-1 bg-secondary btn-secondary rounded-0 btn-sm text-black bg-white fw-bold"
+          >
+            SAVE
+          </button>
+          <button
+            type="button"
+            class="btn w-25 py-2 mx-1 bg-secondary btn-secondary rounded-0 btn-sm text-secondary-emphasis fw-bold bg-transparent"
+          >
+            CANCEL
+          </button>
+          <button
+            type="button"
+            class="btn w-25 mx-1 py-2 bg-secondary btn-secondary rounded-0 btn-sm text-secondary-emphasis fw-bold bg-transparent"
+          >
+            DELETE PROFILE
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tYbc1q8xk38n6g4l9g5y20mm5ez9tkguat9pv7szu9edOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+</html>
