@@ -38,44 +38,69 @@ class Pet {
     this.species = _species;
     this.breed = _breed;
   }
+
+  haLoStessoPadrone = function (_petX) {
+    if (this.ownerName == _petX.ownerName) {
+      return true;
+    }
+    return false;
+  };
 }
 
-const btnAdd = document.getElementById('button');
-const animali = [];
+const pet1 = new Pet('Pippo', 'Mauro', 'cane', 'pitbull');
+const pet2 = new Pet('Morgan', 'Mauro', 'gatto', 'soriano');
+const pet3 = new Pet('Pluto', 'Michele', 'cane', 'dobbermann');
+console.log(pet1.haLoStessoPadrone(pet2));
+console.log(pet1.haLoStessoPadrone(pet3));
 
-btnAdd.addEventListener('click', function(e) {
-        e.preventDefault();
+const pets = [];
 
-        let petName = document.getElementById('petName').value;
-        let ownerName = document.getElementById('ownerName').value;
-        let species = document.getElementById('species').value;
-        let breed = document.getElementById('breed').value;
+const btnAdd = document.getElementById("button");
+const form = document.getElementById("Pet_form");
 
-        let pet1 = new Pet(petName, ownerName, species, breed);
-        animali.push(pet1);
-        mostra();
+btnAdd.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (!form.checkValidity()) {
+    return;
+  }
+  const petName = document.getElementById("petName");
+  const ownerName = document.getElementById("ownerName");
+  const species = document.getElementById("species");
+  const breed = document.getElementById("breed");
+
+  const animal = new Pet(
+    petName.value,
+    ownerName.value,
+    species.value,
+    breed.value
+  );
+  pets.push(animal);
+  aggiungi();
+  petName.value = "";
+  ownerName.value = "";
+  species.value = "";
+  breed.value = "";
 });
 
-// ora che ho l'animale da confrontare, mi rimane confrontarlo e mostrarlo
-
-function comparaPadrone(proprietario) {
-  return this.ownerName === proprietario.ownerName;
-}
-
-function mostra () {
-    console.log(animali);
-    let lista = document.getElementById('petList');
-    lista.innerHTML = '';   //la svuoto come prima cosa
-    for (let i = 0; i < animali.length; i++) {
-      let listItem = document.createElement('li');
-      listItem.innerText = `Nome: ${animali[i].petName},Proprietario: ${animali[i].ownerName}, Specie: ${animali[i].species}, Razza: ${animali[i].breed}`;
-      // Confronta se l'animale corrente ha lo stesso proprietario di un altro animale
-      for (let j = 0; j < animali.length; j++) {
-        if (i !== j && comparaPadrone(animali[i], animali[j])) {
-            listItem.innerText += `, Ha lo stesso proprietario di ${animali[j].petName}`;
-        }
-    }
-    
-    lista.appendChild(listItem);      
-}
-}
+const aggiungi = () => {
+  const petList = document.getElementById("petList");
+  petList.innerHTML = "";
+  pets.forEach((element) => {
+    const row = document.createElement("div");
+    row.classList.add("row");
+    const colPetName = document.createElement("div");
+    colPetName.classList.add("col-3", "text-center", "border", "border-1");
+    colPetName.innerText = element.petName;
+    const colOwnerName = document.createElement("div");
+    colOwnerName.classList.add("col-3", "text-center", "border", "border-1");
+    colOwnerName.innerText = element.ownerName;
+    const colSpecies = document.createElement("div");
+    colSpecies.classList.add("col-3", "text-center", "border", "border-1");
+    colSpecies.innerText = element.species;
+    const colBreed = document.createElement("div");
+    colBreed.classList.add("col-3", "text-center", "border", "border-1");
+    colBreed.innerText = element.breed;
+    row.append(colPetName, colOwnerName, colSpecies, colBreed);
+    petList.appendChild(row);
+  });
+};
