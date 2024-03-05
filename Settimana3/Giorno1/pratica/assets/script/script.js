@@ -41,39 +41,52 @@ class Pet {
 
   haLoStessoPadrone = function (_petX) {
     if (this.ownerName == _petX.ownerName) {
-      return true;
+      return `${this.petName} ha lo stesso padrone di ${_petX.petName}`;
     }
-    return false;
+    return `${this.petName} non ha lo stesso padrone di ${_petX.petName}`;
   };
 }
 
 const pet1 = new Pet('Pippo', 'Mauro', 'cane', 'pitbull');
 const pet2 = new Pet('Morgan', 'Mauro', 'gatto', 'soriano');
 const pet3 = new Pet('Pluto', 'Michele', 'cane', 'dobbermann');
+console.log("*************ESERCIZIO 2************************");
+console.log("\n");
 console.log(pet1.haLoStessoPadrone(pet2));
+console.log("\n");
 console.log(pet1.haLoStessoPadrone(pet3));
+console.log("\n");
+
+// inizio a crearmi l'array vuoto //
 
 const pets = [];
+
+// mi porto bottone e lista da html //
 
 const btnAdd = document.getElementById("button");
 const form = document.getElementById("Pet_form");
 
+// faccio l'Event Listener dal click  //
+
 btnAdd.addEventListener("click", (e) => {
   e.preventDefault();
+  // controllo se il fom è valido  //
   if (!form.checkValidity()) {
     return;
   }
+  // mi porto gli input dall'HTML 
   const petName = document.getElementById("petName");
   const ownerName = document.getElementById("ownerName");
   const species = document.getElementById("species");
   const breed = document.getElementById("breed");
-
+  // inizializzo i valori  //
   const animal = new Pet(
     petName.value,
     ownerName.value,
     species.value,
     breed.value
   );
+  // pusho gli elementi nuovi nell'array e resetto i valori dopo  //
   pets.push(animal);
   aggiungi();
   petName.value = "";
@@ -82,9 +95,11 @@ btnAdd.addEventListener("click", (e) => {
   breed.value = "";
 });
 
+// funzione aggiungi  //
 const aggiungi = () => {
   const petList = document.getElementById("petList");
   petList.innerHTML = "";
+// mi itero il nuovo array  //
   pets.forEach((element) => {
     const row = document.createElement("div");
     row.classList.add("row");
