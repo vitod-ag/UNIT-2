@@ -27,53 +27,37 @@
 
     <main>
         <section class="jumbotron">
+            <div class="title fs-1" id="title"></div>
+            <!-- il titolo qui cambia se voglio aggiungere o modificare (Add/Edit)-->
+            <hr>
             <div class="container">
-                <div class="mb-3 mt-5 mx-5">
-                    <h1 class="border-bottom mb-3 fw-bold">Add Product</h1>
-                    <label for="exampleFormControlInput1" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="nomeInput" placeholder="Nome Prodotto">
-                </div>
-                <div class="mb-3 mx-5">
-                    <label for="exampleFormControlInput1" class="form-label">Brand</label>
-                    <input type="text" class="form-control" id="brandInput" placeholder="Modello">
-                </div>
-                <div class="mb-3 mx-5">
-                    <label for="exampleFormControlInput1" class="form-label">Prezzo</label>
-                    <input type="number" class="form-control" id="prezzoInput" placeholder="0€">
-                </div>
-                <div class="mb-3 mx-5">
-                    <label for="exampleFormControlInput1" class="form-label">Url Immagine</label>
-                    <input type="text" class="form-control" id="urlInput" placeholder="https://linkprodotto.it">
-                </div>
-                <div class="mb-3 mx-5">
-                    <label for="exampleFormControlTextarea1" class="form-label">Descrizione Prodotto</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                <form class="row g-3 d-flex justify-content-end">
-                    <div class="col-auto me-1">
-                        <button type="submit" class="btn btn-warning mb-3 px-4">Reset</button>
-                    </div>
-                    <div class="col-auto me-5">
-                        <button type="submit" class="btn btn-info mb-3 px-4">Save</button>
+                <form>
+                    <label for="name" class="form-label">Nome</label>
+                    <input type="text" id="name" class="form-control" placeholder="Inserire nome del prodotto"
+                        required />
+                    <label for="brand" class="form-label">Brand</label>
+                    <input type="text" id="brand" class="form-control" placeholder="Inserire modello del prodotto"
+                        required />
+                    <label for="price" class="form-label">Prezzo</label>
+                    <input type="number" id="price" class="form-control" placeholder="Prezzo del prodotto" required />
+                    <label for="imageUrl" class="form-label">URL Immagine</label>
+                    <input type="text" id="imageUrl" class="form-control" placeholder="Url dell'immagine" required />
+                    <label for="description" class="form-label">Descrizione prodotto</label>
+                    <textarea id="description" class="form-control" rows="4" required></textarea>
+                    <div>
+                        <button id="deleteBtn" type="button" class="btn btn-danger me-auto w-25" onclick="deleteProduct()"><i class="bi bi-trash"></i></button>
+                        <button type="reset" class="btn btn-outline-dark me-2 w-25">Reset</button>
+                        <button type="submit" class="btn btn-warmimg w-25" id="submitBtn">Salva</button>
                     </div>
                 </form>
-    
             </div>
         </section>
     </main>
 
-
-
-
-
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/back_office.js"></script>
 </body>
 
 </html>

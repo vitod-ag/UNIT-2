@@ -1,32 +1,86 @@
-<!DOCTYPE html>
-<html lang="it">
+const productDetails = document.getElementById('productDetails');
+const endpointAPI = 'https://striveschool-api.herokuapp.com/api/product/';
+const token = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWVhZWFkZDJkN2IxMTAwMTkwZTcwMDEiLCJpYXQiOjE3MDk5ODI0MjQsImV4cCI6MTcxMTE5MjAyNH0.0VtuJryxoxwPAoO62Tdk2I4x7fPLm4zpT8zD5zEQqn4";
+let id;
+let product;
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progetto settimana3 UNIT2</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+window.addEventListener('load', function() {
+    const params = new URLSearchParams (location.search);   //creo un oggetto che mi consente di accedere e manipolare i parametri della query string dell'URL 
+    id = params.get('id');                                  // qui infatti prendo l'id della API e la assegno alla variabile id
+    loadProduct();
+});
 
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid justify-content-between ">
-                <div class="container_pic">
-                    <img src="assets/img/logo.png" class="my-1" alt="logo" style="width: 100px;">
-                </div>
-                <div class="container_link">
-                <a href="#" class="text-white">Home</a>
-                </div>
-            </div>
-          </nav>
-    </header>
-    <main>
-        <div class="container">
-            <div class="mb-3 mt-5 mx-5">
+const loadProduct = async () => {
+    try {
+        let response = await fetch( endpointAPI + id, {
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: token
+            }
+        });
+        product = await response.json();
+        print();
+    } catch (error) {
+		console.log(error);
+	}
+};
+
+const print = () => {                   // la card detail
+    productDetails.innerHTML = `
+    <div class="col-6 text-center">
+        <img src="${product.imageUrl}" width="100%" />
+    </div>
+    <div class="col-6">
+        <div class="fs-5">${product.brand}</div>
+        <div class="fs-3">${product.name}</div>
+        <span class="badge bg-dark text-warning">${product.price}€</span>
+        <p class="mt-4">${product.description}</p>
+    </div>`
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* <div class="mb-3 mt-5 mx-5">
                 <h1 class="border-bottom mb-3">Edit Product</h1>
                 <label for="exampleFormControlInput1" class="form-label">Nome</label>
                 <input type="text" class="form-control" id="nomeInput" placeholder="Nome Prodotto">
@@ -56,20 +110,4 @@
                         <button type="submit" class="btn btn-warning mb-3 mx-5 px-4">Reset</button>
                         <button type="submit" class="btn btn-success mb-3 px-4">Save</button>
                     </div>
-                </div>
-
-            </form>
-
-        </div>
-
-    </main>
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="assets/js/modifica.js"></script>
-</body>
-
-</html>
+                </div> */
